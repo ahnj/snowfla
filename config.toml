@@ -1,4 +1,4 @@
-baseURL = "http://snowfla.com/"
+baseURL = "https://snowfla.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "snowflake, kafka, and other silly adventures"
 theme = "ananke"
