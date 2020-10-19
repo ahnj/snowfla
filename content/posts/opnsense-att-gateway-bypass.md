@@ -54,7 +54,7 @@ RG_ETHER_ADDR='99:55:b2:23:a4:45'  # MAC address of Residential Gateway
 LOG=/var/log/opnatt.log
 ```
 
-OPNsense network interface configurations are configured
+OPNsense network interface configurations are somewhat straight forward.  All three interfaces `LAN`, `OPT1` and `WAN` are pictured below with pi-hole running as the DNS server at `192.168.1.102`.  
 
 # [LAN]
 
