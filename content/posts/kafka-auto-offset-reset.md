@@ -38,5 +38,11 @@ Below is an example Snowflake sink connector configuration set to LIFO behavior:
 }
 ```
 
+and environment variable set to:
+
+```
+CONNECT_CONNECTOR_CLIENT_CONFIG_OVERRIDE_POLICY=All
+```
+
  Kafka now allows infinate retention period, this might even be a more commonly recurring issue for those Connects in the wild.
 
