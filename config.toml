@@ -18,9 +18,9 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  favicon = ""
+  favicon = "favicon.ico"
   site_logo = ""
-  description = ""
+  description = "description lang here"
   facebook = ""
   twitter = "https://twitter.com/ahnj"
   instagram = ""
