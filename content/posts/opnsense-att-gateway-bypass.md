@@ -8,7 +8,7 @@ featured_image: "/images/opnsense_traffic.png"
 tags: ["usg", "opnsense", "att", "fiber"]
 ---
 
-All I wanted was a graph of real-time broadband utilization of my household.  A fully [Unifi](https://unifi-network.ui.com/)'ed network sure looks pretty, but [USG](https://amzn.to/31i09p3) just couln't do it.  Times have changed.  Many home network is wired up for 1.0 Gbps, and today's open source firewalls have the features I need.  Like real-time traffic graphs.  My trusty USG served me well for years, but off the ebay it goes.
+All I wanted was a graph of real-time broadband utilization of my household.  A fully [Unifi](https://unifi-network.ui.com/)'ed network sure looks pretty, but [USG](https://amzn.to/31i09p3) just couln't do it.  Times have changed.  Many home networks are wired up for 1.0 Gbps, and today's open source firewalls have the features I need.  Like real-time traffic graphs.  My trusty USG served me well for years, but off to the ebay it goes.
 
 In its place, I put together some OPNsense hardware and configured it to bypass AT&T Fiber CPE (BW210-700).  Here's how I did it.
 
@@ -24,7 +24,7 @@ First the easy part: purchase and assemble the hardware.
 - USB [Thumb drive](https://amzn.to/2Hhwk0w)
 
 
-I bought a barran Qotom mini PC separately from the DRAM and SSD to get the components I thought best.  You can also buy a fully-assembled configuration (like this [one](https://amzn.to/3dDsxqx)) or, if you have an unused PC (with sufficiently beefy CPU and at least 3 NIC cards) lying around, you can use that.  Just make sure the ethernet hardware is [compatible](https://wiki.opnsense.org/manual/hardware.html) with OPNsense.
+I bought a barren Qotom mini PC separately from the DRAM and SSD to get the components I thought best.  You can also buy a fully-assembled configuration (like this [one](https://amzn.to/3dDsxqx)) or, if you have an unused PC (with sufficiently beefy CPU and at least 3 NIC cards) lying around, you can use that.  Just make sure the ethernet hardware is [compatible](https://wiki.opnsense.org/manual/hardware.html) with OPNsense.
 
 # Bootable USB drive
 Since the raw hardware above comes with no software installed, follow the well written [instructions](https://docs.opnsense.org/manual/install.html) from OPNsense to prepare an USB boot drive - for qotom q555G6, select architecture `amd64`, and image type of `vga`.
