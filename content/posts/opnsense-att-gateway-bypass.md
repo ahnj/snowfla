@@ -8,12 +8,11 @@ featured_image: "/images/opnsense_traffic.png"
 tags: ["usg", "opnsense", "att", "fiber"]
 ---
 
-Real-time WAN traffic graph is all I wanted.  Fully Unifi'ed network sure looks pretty, but USG just failed to keep up with the times.  The lack of raw CPU headroom for performant packet inspection at 1.0 Gbps and the rich feature set of open source firewall pushed me to retire my trusty [USG](https://amzn.to/31i09p3).  It sure served me well for the past four years, but off to ebay it goes.  
+All I wanted was a graph of real-time broadband utilization of my household.  A fully [Unifi](https://unifi-network.ui.com/)'ed network sure looks pretty, but [USG](https://amzn.to/31i09p3) just couln't do it.  Times have changed.  Many home network is wired up for 1.0 Gbps, and today's open source firewalls have the features I need.  Like real-time traffic graphs.  My trusty USG served me well for years, but off the ebay it goes.
 
-Below is a detailed tutorial on assembling the necessary OPNsense hardware, and software configuration to bypass AT&T Fiber CPE (BGW210-700).  My existing USG3P was  running eap_proxy to accomplish the CPE bypass trick.
+In its place, I put together some OPNsense hardware and configured it to bypass AT&T Fiber CPE (BW210-700).  Here's how I did it.
 
-
-First the easy part.  Purchase and assemble the firewall hardware.
+First the easy part: purchase and assemble the hardware.
 
 
 - QOTOM Q555G6 Intel i5 [mini PC](https://amzn.to/2IHdO2y)
@@ -25,7 +24,7 @@ First the easy part.  Purchase and assemble the firewall hardware.
 - USB [Thumb drive](https://amzn.to/2Hhwk0w)
 
 
-Purchasing the PC hardware separately from the DRAM and SSD ensures quality components, but a fully assembled configurations are available like this [one](https://amzn.to/3dDsxqx).  Alternatively, any ordinary PC with sufficiently beefy CPU and a minimum of 3 NIC cards will suffice.  Just make sure the ethernet hardware is supported by OPNsense.
+I bought a barran Qotom mini PC separately from the DRAM and SSD to get the components I thought best.  You can also buy a fully-assembled configuration (like this [one](https://amzn.to/3dDsxqx)) or, if you have an unused PC (with sufficiently beefy CPU and at least 3 NIC cards) lying around, you can use that.  Just make sure the ethernet hardware is [compatible](https://wiki.opnsense.org/manual/hardware.html) with OPNsense.
 
 # Bootable USB drive
 Since the raw hardware above comes with no software installed, follow the well written [instructions](https://docs.opnsense.org/manual/install.html) from OPNsense to prepare an USB boot drive - for qotom q555G6, select architecture `amd64`, and image type of `vga`.
@@ -67,7 +66,7 @@ OPNsense network interface configurations are somewhat straight forward.  All th
 # [WAN]
 
 Don't forget to spoof the MAC address `RG_ETHER_ADDR` here. 
-
+cal
 ![pfatt](/images/opnsense_wan.png)
 
 # Firewall
