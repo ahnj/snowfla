@@ -9,7 +9,7 @@ tags: ["snowflake", "cs"]
 
 ---
 
-Sometimes you care about how magic is performed behind the curtain.  The 'two french dudes' and their friends have generously shared some it.
+Sometimes you care about how the technical magic is performed behind the curtain.  The 'two french dudes' and their friends have generously shared their notes with us.
 
 # Snowflake Paper
 http://pages.cs.wisc.edu/~yxy/cs839-s20/papers/snowflake.pdf
