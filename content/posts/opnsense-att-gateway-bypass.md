@@ -3,14 +3,14 @@ title: "OPNsense AT&T Gateway Bypass"
 date: 2020-10-18T07:45:36-07:00
 draft: false
 
-description: "Step by step tutorial on USG3P to OPNsense migration"
+description: "Step by step tutorial on OPNsense BGW210-700 bypass"
 featured_image: "/images/opnsense_traffic.png"
-tags: ["usg", "opnsense", "att", "fiber"]
+tags: ["usg", "opnsense", "att", "fiber", "pfatt"]
 ---
 
 All I wanted was a graph of real-time broadband utilization of my household.  A fully [Unifi](https://unifi-network.ui.com/)'ed network sure looks pretty, but [USG](https://amzn.to/31i09p3) just couln't do it.  Times have changed.  Many home networks are wired up for 1.0 Gbps, and today's open source firewalls have the features I need.  Like real-time traffic graphs.  My trusty USG served me well for years, but off to the ebay it goes.
 
-In its place, I put together some OPNsense hardware and configured it to bypass AT&T Fiber CPE (BW210-700).  Here's how I did it.
+In its place, I put together some OPNsense hardware and configured it to bypass AT&T Fiber CPE (BW210-700).  Here's how I did it.ds
 
 First the easy part: purchase and assemble the hardware.
 
