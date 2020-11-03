@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "snowflake, kafka, and other silly adventures"
 theme = "ananke"
 
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+
 enableemoji = true
 
 DefaultContentLanguage = "en"
@@ -36,3 +38,6 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   featured_image = "/images/Bubo_scandiacus_male_Muskegon.jpg"
   recent_posts_number = 1
+
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
+
