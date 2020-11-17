@@ -9,9 +9,9 @@ tags: ["kafka connect", "snowflake", "tests", "key-pair-authentication"]
 
 ---
 
-Recently, I found myself in a position of having to develop some degree of expertise with Snowflake Kafka Connect sink [plug-in](https://github.com/snowflakedb/snowflake-kafka-connector).  While the project itself has some configuration [documentation](https://docs.snowflake.com/en/user-guide/kafka-connector.html), and a [README](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/README-TEST.md), it was not obvious to me how to initiate a build or get one of the tests up and running.
+Recently, I found myself in a position of having to develop some degree of expertise with Snowflake Kafka Connect sink [plug-in](https://github.com/snowflakedb/snowflake-kafka-connector).  While this open-source project has some configuration [documentation](https://docs.snowflake.com/en/user-guide/kafka-connector.html), and a [README](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/README-TEST.md), it was not obvious to me how to initiate a build or get one of the tests up and running.
 
-Step-by-step instructions below shows Snowflake Kafka Connector end-to-end test running on a macOS against a freebie Snowflake [trial](https://signup.snowflake.com/) instance.  Among the menu of end-to-end tests available, I've chosen the [Apache End2End Test AWS](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/.github/workflows/End2EndTestApacheAws.yml) as it fulfills my goal of testing a particular version of a plug-in within a specific Apache Kafka version stack.  Here are the prerequisites:
+Step-by-step instructions below demonstrates Snowflake Kafka Connector end-to-end test running on a macOS against a freebie Snowflake [trial](https://signup.snowflake.com/) instance.  Among the menu of end-to-end tests available, I've chosen the [Apache End2End Test AWS](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/.github/workflows/End2EndTestApacheAws.yml) as it fulfills my goal of testing a particular version of a plug-in within a specific Apache Kafka version stack.  Here are the prerequisites:
 
 * Snowflake instance
 * macOS host
