@@ -1,7 +1,7 @@
 baseURL = "https://snowfla.com/"
 languageCode = "en-us"
 title = "snowflake, kafka, and other silly adventures"
-theme = "ananke"
+theme = "ananke-fork"
 
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
 
@@ -22,7 +22,7 @@ enableRobotsTXT = true
 [params]
   favicon = "favicon.ico"
   site_logo = ""
-  description = "description lang here"
+  description = "snowflake kafka blog"
   facebook = ""
   twitter = "https://twitter.com/ahnj"
   instagram = ""
