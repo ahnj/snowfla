@@ -11,7 +11,7 @@ tags: ["kafka connect", "snowflake", "tests", "key-pair-authentication"]
 
 Recently, I found myself in a position of having to develop some degree of expertise with Snowflake Kafka Connect sink [plug-in](https://github.com/snowflakedb/snowflake-kafka-connector).  While the project itself has some configuration [documentation](https://docs.snowflake.com/en/user-guide/kafka-connector.html), and a [README](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/README-TEST.md), it was not obvious to me how to initiate a build or get one of the tests up and running.
 
-Step-by-step instructions below shows Snowflake Kafka Connector end-to-end test running on a macOS against a freebie Snowflake [trial](https://signup.snowflake.com/) instance.  Among the menu of end-to-end tests available, I've chosen the [Apache End2End Test AWS](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/.github/workflows/End2EndTestApacheAws.yml) as it fulfills my goal of testing a particular version of a plug-in within a specific Aache Kafka version stack.  Here are the prerequisites:
+Step-by-step instructions below shows Snowflake Kafka Connector end-to-end test running on a macOS against a freebie Snowflake [trial](https://signup.snowflake.com/) instance.  Among the menu of end-to-end tests available, I've chosen the [Apache End2End Test AWS](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/.github/workflows/End2EndTestApacheAws.yml) as it fulfills my goal of testing a particular version of a plug-in within a specific Apache Kafka version stack.  Here are the prerequisites:
 
 * Snowflake instance
 * macOS host
@@ -50,10 +50,10 @@ My `~/.snowsql/config` file contains a section like below.  If you do not have `
 [connections.training]
 accountname = ph65577.us-east-2.aws
 username = jimahn
-warehouse=COMPUTE_WH
+warehouse = COMPUTE_WH
 rolename = PUBLIC
-database=DEMO_DB
-schemaname=PUBLIC
+database = DEMO_DB
+schemaname = PUBLIC
 ...
 ```
 
@@ -68,12 +68,11 @@ jimahn#COMPUTE_WH@DEMO_DB.PUBLIC>
 ```
 
 
-
-We're now done with setting up and testing Snowflake user and secrets.  Let's now embed this into our testing rig.
-
+Snowflake user and secret setup is now complete.  Let's now embed this into our testing rig.
 
 
-# Snowflake secrets configuration
+
+# Arm Tests with Snowflake secrets
 Make a copy of [profile.json.example](https://github.com/snowflakedb/snowflake-kafka-connector/blob/master/profile.json.example) as `profile.json` and enter your Snowflake secrets.
 
 ```bash
@@ -101,20 +100,20 @@ Mine looks like below:
 
 `private_key` is simply the single-line version of the super-long string we created in file `rsa_key.p8`.
 
-There's an odd Java related(?) twist, which requires yet another version of the key as `encrypted_private_key`, which can be created via:
+There's an odd Java related(?) twist, which requires yet another version of the key as `encrypted_private_key`.  This variant of the key can be created via:
 
 ```bash
 pkcs8 -in rsa_key.p8 -outform pem -out rsa_key.pem
 ```
 
-In summary `profile.json` requires two different types of private keys:
+In summary `profile.json` requires two different variants the of same private key:
 
-* `private_key` from rsa_key.pem file
 * `encrypted_private_key` from rsa_key.p8 file
+* `private_key` from rsa_key.pem file
 
 # Encrypt `profile.json`
 
-Now that we have `profile.json` prepared, we must encrypt it.  This is how secrets are stored within the github repo such that it can then be securely forwarded to the tests housed in github `actions`.  Somewhat tedious, but without this step, the private keys would end up being checked-in naked into github.
+Now that we have file `profile.json` prepared, we must encrypt it.  This is how secrets are stored within the github repo such that it can then be shared with the tests housed in github `actions`.  Somewhat tedious, but without this step, the private keys would end up being checked-in naked into github.
 
 # Install `gpg`
 
@@ -153,7 +152,7 @@ build             0      build
 $ 
 ```
 
-Unfortunately, all five jobs are named the same.  Let's rename the desired job from build to  build_apache_aws:
+Unfortunately, all five jobs are named `build`.  Let's rename the desired job from `build` to `build_apache_aws`:
 
 ```bash
 sed -i '' 's/build\:/build_apache_aws\:/g' .github/workflows/End2EndTestApacheAws2.yml
@@ -180,17 +179,17 @@ $ act -v -j build_apache_aws -P ubuntu-18.04=nektos/act-environments-ubuntu:18.0
 
 # Successful Build & Test
 
-Job `build_apache_aws` has two primary objectives, first is a build of the plug-in jar: `snowflake-kafka-connector-1.5.0.jar`, followed by a test of the built jar. Successful build of the jar looks like this:
+Job `build_apache_aws` has two primary objectives, first is a build of the plug-in jar: `snowflake-kafka-connector-1.5.0.jar`, followed by a test of the that jar. Successful build of the jar looks like this:
 
 ![cli](/images/plug-in-build-jar.png)
 
-From Snowflake web gui, you should be able to see all of the snowflake operations in action while the test is in flight.
+From Snowflake web interface, you should be able to see all of the snowflake operations in action while the test is in flight.
 
 ![gui](/images/post_test_history_view.png)
 
 
 
-Docker container remains available after test completion for further inspection.
+Docker container remains available after the test completion for further inspection.
 
 ```bash
 $ docker ps
@@ -202,7 +201,7 @@ root@docker-desktop:/github/workspace#
 
 
 
-Lastly, to make the tests pass with the above setup, I had to remove test `testFIPS` from the test suite.  If you know how to remedy this, please share it with me.
+Lastly, to make all the tests pass with the above setup, I had to remove test `testFIPS` from the test suite.  If you know how to remedy this, please share it with me.
 
 ![skipped_test_fips](/images/skipped_test_fips.png)
 
