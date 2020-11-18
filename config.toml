@@ -9,7 +9,7 @@ enableemoji = true
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate = 10 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -24,7 +24,7 @@ enableRobotsTXT = true
   site_logo = ""
   description = "snowflake kafka blog"
   facebook = ""
-  twitter = "https://twitter.com/ahnj"
+  twitter = ""
   instagram = ""
   youtube = ""
   github = "https://github.com/ahnj"
@@ -41,3 +41,6 @@ enableRobotsTXT = true
 
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
 
+[params.utterances]       # https://utteranc.es/
+  owner = "ahnj"              # Your GitHub ID
+  repo = "snowfla.utterances"               # The repo to store comments
