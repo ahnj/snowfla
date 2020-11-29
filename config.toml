@@ -10,7 +10,7 @@ enableemoji = true
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 10 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
+googleAnalytics = "G-9985LGNZWS"
 enableRobotsTXT = true
 
 
