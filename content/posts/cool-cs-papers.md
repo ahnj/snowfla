@@ -11,6 +11,6 @@ tags: ["trie", "SuRF"]
 
 I serendipitously encountered a cool CS [paper](http://www.cs.cmu.edu/~huanche1/publications/surf_paper.pdf) on memory-efficient data structures for search.
 
-[Huanchen Zhang](http://www.cs.cmu.edu/~huanche1/) gives an excellent talk about it here:
+[Huanchen Zhang](http://www.cs.cmu.edu/~huanche1/) gives an excellent talk about it below.  Besure to catch the Q&A at the end - there's a funny exchange.  :)
 
 {{< youtube OD29hZww-DM >}}
