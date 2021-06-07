@@ -43,7 +43,7 @@ ALTER USER jimahn SET RSA_PUBLIC_KEY='MIIBIjANBg...';
 
 # Test your keys via `snowsql`
 
-My `~/.snowsql/config` file contains a section like below.  If you do not have `snowsql` installed, please see this [post](https://snowfla.com/posts/snowsql-cli-example-config/).
+My `~/.snowsql/config` file contains a section like below.  If you do not have `snowsql` installed, please see this [post](/posts/snowsql-cli-example-config/).
 
 ```
 ...
