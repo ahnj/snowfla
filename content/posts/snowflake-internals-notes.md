@@ -5,7 +5,7 @@ draft: false
 
 description: "Collection of Snowflake geekery"
 featured_image: "/images/pexels-egor-kamelev-813872.jpg"
-tags: ["snowflake", "foundationdb"]
+tags: ["snowflake", "foundationdb", "andy pavlo"]
 
 ---
 
@@ -21,7 +21,7 @@ Paper [annotations](https://nattaylor.com/blog/2019/snowflake-internals/) by Nat
 https://www.foundationdb.org/files/fdb-paper.pdf
 
 
-# Carnegie Mellon Lecture - Andy Pavlo 15-721 - 2018
+# Carnegie Mellon Advanced Database Systems 15-721 - 2018 - Ashish Motivala
 https://15721.courses.cs.cmu.edu/spring2018/slides/25-snowflake.pdf
 {{< youtube dABd7JQz0A8 >}}
 
