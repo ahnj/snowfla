@@ -5,7 +5,7 @@ draft: false
 
 description: "Collection of Snowflake geekery"
 featured_image: "/images/pexels-egor-kamelev-813872.jpg"
-tags: ["snowflake", "cs"]
+tags: ["snowflake", "foundationdb"]
 
 ---
 
@@ -23,12 +23,15 @@ https://15721.courses.cs.cmu.edu/spring2018/slides/25-snowflake.pdf
 {{< youtube dABd7JQz0A8 >}}
 
 
-# Carnegie Mellon Quarantine Database Tech Talks (2020) - Query Optimization - Jiaqi Yan  
+# Carnegie Mellon Quarantine Database Tech Talks 2020 - Query Optimization - Jiaqi Yan  
 https://db.cs.cmu.edu/seminar2020
 {{< youtube CPWn1SZUZqE >}}
 
 
-# Carnegie Mellon Quarantine Database Tech Talks (2020) - FoundationDB - Markus Pilman
+# Carnegie Mellon Quarantine Database Tech Talks 2020 - FoundationDB - Markus Pilman
 https://db.cs.cmu.edu/seminar2020
 {{< youtube OJb8A6h9jQQ >}}
+
+# FoundationDB 2018 - Ashish Motivala
+{{< youtube KkeyjFMmIf8 >}}
 
