@@ -106,7 +106,7 @@ There's an odd Java related(?) twist, which requires yet another version of the 
 pkcs8 -in rsa_key.p8 -outform pem -out rsa_key.pem
 ```
 
-In summary `profile.json` requires two different variants the of same private key:
+In summary, `profile.json` requires two different variants the of same private key:
 
 * `encrypted_private_key` from rsa_key.p8 file
 * `private_key` from rsa_key.pem file
