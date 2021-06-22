@@ -34,7 +34,7 @@ Below is an example Snowflake sink connector configuration set to LIFO behavior:
   "snowflake.private.key": "*******",
   "snowflake.database.name": "SF_KAFKA_INGEST_DB",
   "snowflake.schema.name": "SINK_SCHEMA",
-  "snowflake.topic2table.map": "topic_with_super_big_retention_period:twsbrp_table",
+  "snowflake.topic2table.map": "topic_with_super_long_retention_period:twslrp_table",
   "buffer.flush.time": "10"
 }
 ```
