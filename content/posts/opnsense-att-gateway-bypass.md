@@ -15,7 +15,7 @@ In its place, I put together some OPNsense hardware and configured it to bypass 
 First the easy part: purchase and assemble the hardware.
 
 
-- QOTOM Q555G6 Intel i5 [mini PC](https://www.amazon.com/dp/B07F7P18W2?tag=jisge-20)
+- QOTOM Q555G6 Intel i5 [mini PC](https://www.amazon.com/dp/B07KM7YY4Y?tag=jisge-20)
 
 - 8GB [DRAM](https://www.amazon.com/dp/B01BIWKP58?tag=jisge-20)
 
@@ -24,7 +24,7 @@ First the easy part: purchase and assemble the hardware.
 - USB [Thumb drive](https://www.amazon.com/dp/B001XURP8Q?tag=jisge-20)
 
 
-I bought a barren mini PC separately from the DRAM and SSD to get the components I thought best.  You can also buy a fully-assembled configuration (like this [one](https://www.amazon.com/dp/B07G9NHRGQ?tag=jisge-20)) or, if you have an unused PC (with sufficiently beefy CPU and at least 3 NIC cards) lying around, you can use that.  Just make sure the ethernet hardware is [compatible](https://wiki.opnsense.org/manual/hardware.html) with OPNsense.
+I bought a barren mini PC separately from the DRAM and SSD to get the components I thought best.  You can also buy a fully-assembled configuration (like this [one](https://www.amazon.com/dp/B07KM481M4?tag=jisge-20)) or, if you have an unused PC (with sufficiently beefy CPU and at least 3 NIC cards) lying around, you can use that.  Just make sure the ethernet hardware is [compatible](https://wiki.opnsense.org/manual/hardware.html) with OPNsense.
 
 # Bootable USB drive
 Since the raw hardware above comes with no software installed, follow the well written [instructions](https://docs.opnsense.org/manual/install.html) from OPNsense to prepare an USB boot drive - for qotom q555G6, select architecture `amd64`, and image type of `vga`.
