@@ -17,6 +17,10 @@ http://pages.cs.wisc.edu/~yxy/cs839-s20/papers/snowflake.pdf
 
 Paper [annotations](https://nattaylor.com/blog/2019/snowflake-internals/) by Nat Taylor
 
+# Snowtrail Paper - FiCloud 2023
+[Smart Query Sampling](/FiCloud2023-smartquerysampling.pdf)
+By Jerry Tang & et al (2023).
+
 # FoundationDB Paper 2021
 https://www.foundationdb.org/files/fdb-paper.pdf
 
