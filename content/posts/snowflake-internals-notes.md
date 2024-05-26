@@ -1,6 +1,6 @@
 ---
 title: "Snowflake Internals Paper and Lectures"
-date: 2020-10-28T20:48:14-07:00
+date: 2024-05-26T14:48:14-07:00
 draft: false
 
 description: "Collection of Snowflake geekery"
